@@ -40,18 +40,15 @@
       state.object.addClass("absolute").offset(state.offset);
     }
     animate_shuffle = (function(_this) {
-      return function(timeout) {
+      return function() {
         var len2, m, results1;
-        if (timeout == null) {
-          timeout = 1000;
-        }
         results1 = [];
         for (m = 0, len2 = states.length; m < len2; m++) {
           state = states[m];
           results1.push(state.object.velocity({
             left: Math.random() * (w - max_width),
             top: Math.random() * (h - max_height)
-          }, timeout));
+          }, 1000));
         }
         return results1;
       };
@@ -69,7 +66,7 @@
       return results1;
     };
     action = animate_restore;
-    animate_shuffle(0);
+    animate_shuffle();
     $("body").css("color", "#e0e2e4");
     return $(window).on("click", (function(_this) {
       return function() {

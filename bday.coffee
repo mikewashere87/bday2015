@@ -34,7 +34,7 @@ $(() ->
 
         state.object.addClass("absolute").offset(state.offset)
 
-    animate_shuffle = (timeout=1000) =>
+    animate_shuffle = () =>
 
         for state in states
 
@@ -43,7 +43,7 @@ $(() ->
                     left: Math.random() * (w - max_width)
                     top: Math.random() * (h - max_height)
                 },
-                timeout
+                1000
             )
 
     animate_restore = () ->
@@ -59,7 +59,7 @@ $(() ->
             )
 
     action = animate_restore
-    animate_shuffle(0)
+    animate_shuffle()
     $("body").css("color", "#e0e2e4")
     $(window).on("click", () =>
 
