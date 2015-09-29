@@ -67,7 +67,7 @@ $(() ->
         action()
         action = if action is animate_shuffle then animate_restore else animate_shuffle
 
-    $(window).on("click", click_tap)
-    $(window).on("tap", click_tap)
+    $("body").on("click", click_tap)
+    $("body").on("tap", click_tap)
 
 )

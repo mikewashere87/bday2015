@@ -75,8 +75,8 @@
         return action = action === animate_shuffle ? animate_restore : animate_shuffle;
       };
     })(this);
-    $(window).on("click", click_tap);
-    return $(window).on("tap", click_tap);
+    $("body").on("click", click_tap);
+    return $("body").on("tap", click_tap);
   });
 
 }).call(this);
