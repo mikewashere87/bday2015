@@ -38,7 +38,7 @@ $(() ->
 
         for state in states
 
-            state.object.animate(
+            state.object.velocity(
                 {
                     left: Math.random() * (w - max_width)
                     top: Math.random() * (h - max_height)
@@ -50,7 +50,7 @@ $(() ->
 
         for state in states
 
-            state.object.animate(
+            state.object.velocity(
                 {
                     left: state.offset.left
                     top: state.offset.top

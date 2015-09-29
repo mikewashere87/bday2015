@@ -45,7 +45,7 @@
         results1 = [];
         for (m = 0, len2 = states.length; m < len2; m++) {
           state = states[m];
-          results1.push(state.object.animate({
+          results1.push(state.object.velocity({
             left: Math.random() * (w - max_width),
             top: Math.random() * (h - max_height)
           }, 1000));
@@ -58,7 +58,7 @@
       results1 = [];
       for (m = 0, len2 = states.length; m < len2; m++) {
         state = states[m];
-        results1.push(state.object.animate({
+        results1.push(state.object.velocity({
           left: state.offset.left,
           top: state.offset.top
         }, 1000));
