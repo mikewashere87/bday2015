@@ -5,7 +5,7 @@
   message = "Поздравляю, Вы приглашены на день рождения Никиты! Соизвольте явиться 3 октября (суббота) сего года в салон госпожи Анны аккурат к 18 часам (кто забыл/не знает адрес — высылайте голубиную почту). Проходить на территорию мероприятия без алкогольных напитков строжайше запрещено.";
 
   $(function() {
-    var action, animate_restore, animate_shuffle, ch, h, i, j, k, l, len, len1, max_height, max_width, ref, ref1, results, state, states, w;
+    var action, animate_restore, animate_shuffle, ch, click_tap, h, i, j, k, l, len, len1, max_height, max_width, ref, ref1, results, state, states, w;
     $("body").css("background", "#293134");
     $("body").css("color", "#293134");
     ref = [$(window).width(), $(window).height()], w = ref[0], h = ref[1];
@@ -68,13 +68,15 @@
     action = animate_restore;
     animate_shuffle();
     $("body").css("color", "#e0e2e4");
-    return $(window).on("click", (function(_this) {
+    click_tap = (function(_this) {
       return function() {
         console.log("click");
         action();
         return action = action === animate_shuffle ? animate_restore : animate_shuffle;
       };
-    })(this));
+    })(this);
+    $(window).on("click", click_tap);
+    return $(window).on("tap", click_tap);
   });
 
 }).call(this);

@@ -61,12 +61,13 @@ $(() ->
     action = animate_restore
     animate_shuffle()
     $("body").css("color", "#e0e2e4")
-    $(window).on("click", () =>
+    click_tap = () =>
 
         console.log("click")
         action()
         action = if action is animate_shuffle then animate_restore else animate_shuffle
 
-    )
+    $(window).on("click", click_tap)
+    $(window).on("tap", click_tap)
 
 )
