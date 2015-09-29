@@ -1,0 +1,43 @@
+.inline {
+
+    display: inline-block;
+
+}
+
+.absolute {
+
+    position: absolute;
+
+}
+
+#container {
+
+    position: relative;
+    top: 50%;
+    /* transform: translateY(-50%); */
+
+}
+
+body {
+
+    margin: 0;
+
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
